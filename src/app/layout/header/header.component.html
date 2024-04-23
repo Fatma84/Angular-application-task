@@ -1,0 +1,58 @@
+<nav #navbar class="navbar active">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" onClick="return false;" class="navbar-toggle collapsed"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-expanded="false"></a>
+      <a href="#" onClick="return false;" class="bars" (click)="mobileMenuSidebarOpen($event,'overlay-open')"></a>
+      <a class="navbar-brand">
+        <img src="assets/images/logo-icon.svg" alt="" />
+      </a>
+    </div>
+
+    <div class="search">
+      <form [formGroup]="form">
+        <mat-form-field appearance="outline">
+          <input matInput type="text" (input)="onSearchChange($event)" formControlName="search" placeholder="Search by id">
+          <i class="material-icons-outlined color-icon p-3" matSuffix>search</i>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div
+      class="collapse navbar-collapse"
+      [ngClass]="isNavbarCollapsed ? '' : 'show'"
+    >
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- #END# Full Screen Button -->
+        <li class="nav-item">
+          <button
+            mat-button
+            class="lang-dropdown nav-notification-icons"
+          >
+            @if (flagvalue !== undefined) {
+              <img src="{{ flagvalue }}" height="16" />
+            }
+            @if (flagvalue === undefined) {
+              <img src="{{ defaultFlag }}" height="16" />
+            }
+          </button>
+        </li>
+        <!-- #START# Notifications-->
+        <li class="nav-item btnNotification" ngbDropdown>
+          <button
+            mat-button
+            class="nav-notification-icons"
+          >
+            <app-feather-icons
+              [icon]="'bell'"
+              [class]="'header-icon'"
+            ></app-feather-icons>
+            <span class="label-count bg-orange"></span>
+          </button>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

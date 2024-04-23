@@ -1,0 +1,36 @@
+.user {
+
+  .block-header {
+    a {
+      position: absolute;
+      top: 11%;
+      right: 4%;
+      background:  #1d4281;
+    }
+  }
+  .card {
+    transition: .7s all ease-in-out;
+    p {
+      color: #1d4281;
+
+      i {
+        vertical-align: sub;
+        font-size: 18px;
+      }
+    }
+
+    .phone {
+      color: #99a1b7;
+      font-weight: 600;
+
+      .material-icons {
+        vertical-align: sub !important;
+      }
+
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<section class="container mt-5 user">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="'Users'" [items]="['Users']" [active_item]="'User'"></app-breadcrumb>
+      <a mat-mini-fab routerLink="/admin/users"> <i class="fas fa-share"></i></a>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12">
+        <a routerLink="details">
+          <div class="card">
+            <div class="m-b-20">
+              <div class="contact-grid">
+                <div class="profile-header bg-c-blue">
+                  <div class="user-name">{{user?.first_name | titlecase}} {{user?.last_name}}</div>
+                  <div class="name-center">Admin</div>
+                </div>
+                <img src="{{user?.avatar}}" class="user-img" alt="user">
+                <p>
+                  <i class="material-icons">email</i>
+                  {{user?.email | titlecase}}
+                </p>
+                <div>
+                <span class="phone">
+                  <i class="material-icons">phone</i>264-625-2583</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+

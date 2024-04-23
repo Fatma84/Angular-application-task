@@ -1,0 +1,39 @@
+<section class="container mt-5 users">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="'Home'" [items]="['Home']" [active_item]="'Users List'"></app-breadcrumb>
+    </div>
+    <div class="row clearfix">
+      @for(user of filteredUsers; track user) {
+        <div class="col-lg-3 col-md-12">
+         <a (click)="userDetails(user.id.toString())">
+           <div class="card">
+             <div class="m-b-20">
+               <div class="contact-grid">
+                 <div class="profile-header bg-cyan">
+                   <div class="user-name">{{user.first_name | titlecase}} {{user.last_name}}</div>
+                   <div class="name-center">Admin</div>
+                 </div>
+                 <img src="{{user.avatar}}" class="user-img" alt="">
+                 <p class="mb-2">
+                   <i class="material-icons">email</i>
+                   {{user?.email | titlecase}}
+                 </p>
+                 <div>
+                <span class="phone">
+                  <i class="material-icons">phone</i>264-625-2583</span>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </a>
+        </div>
+      }
+    </div>
+
+  <div class="block-footer mb-3">
+    <app-paginator></app-paginator>
+  </div>
+  </div>
+</section>

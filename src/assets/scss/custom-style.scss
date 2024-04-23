@@ -1,0 +1,104 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ecf0f475;
+}
+:root {
+  --color1 : #c2272e;
+  --color2 : #1a202e ;
+  --color3 : #ffffff;
+  --color4 : #df1620;
+  --color5 : #cfd8e3;
+  --color6 : #00000066; // active background
+  --color7: #1a202e;
+  --color8 :rgba(0, 0, 0, 0.2); // hover background
+}
+
+/*White theme styl*/
+.theme-white {
+
+  .profile-header {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .navbar {
+    font-family: 'Poppins', sans-serif;
+
+    .header-icon .feather-menu {
+      color: var(--color1) !important;
+    }
+  }
+   .navbar-header {
+
+     .logo-name {
+       color: var(--color5) !important;
+     }
+  }
+
+
+  .sidebar {
+    background: var(--color2);
+    border-right: 1px solid #2f3a44;
+    font-family: 'Poppins', sans-serif;
+
+    .menu {
+      .list {
+
+        li.active-top .menu-top {
+          background: var(--color1);
+          .sidebarIcon {
+            color: var(--color5);
+          }
+        }
+        .header {
+          color: var(--color1);
+          font-weight: 600;
+        }
+
+         a {
+           span {
+             color: var(--color5);
+           }
+           .sidebarIcon {
+             color: var(--color1);
+           }
+
+           &:hover {
+             background: var(--color6);
+
+             .sidebarIcon {
+               color: var(--color5);
+             }
+           }
+         }
+
+      }
+    }
+  }
+
+}
+
+/*Common theme style*/
+
+.navbar-brand img {
+  max-width: 100%;
+  width: 38px;
+  height: 38px;
+  border-radius: 10%;
+}
+
+.search {
+  .mat-mdc-text-field-wrapper {
+    width: 300px !important;
+    height: 45px !important;
+    align-items: center;
+  }
+
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: #e1e1e1;
+    transition: .7s all ease-in-out;
+
+
+  }
+}

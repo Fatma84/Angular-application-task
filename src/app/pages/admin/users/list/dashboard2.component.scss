@@ -1,0 +1,28 @@
+.users {
+
+  .card {
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+
+    p {
+      color: #1d4281;
+
+      i {
+        vertical-align: sub;
+        font-size: 18px;
+      }
+    }
+
+    .phone {
+      color: #99a1b7;
+      font-weight: 600;
+
+      .material-icons {
+        vertical-align: sub !important;
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

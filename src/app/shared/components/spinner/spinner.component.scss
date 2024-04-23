@@ -1,0 +1,17 @@
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.spinner-inner {
+  height: 100%;
+  background-color: #ffffff;
+  width: 0;
+  transition: width 0.1s linear;
+}

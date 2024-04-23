@@ -1,0 +1,24 @@
+.search {
+  position: absolute;
+  right: 44%;
+  top: 8px;
+
+  i {
+    color: #1d4281;
+    opacity: .9;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .search {
+    position: unset;
+
+    form {
+      text-align: center;
+    }
+  }
+
+}
+
+
